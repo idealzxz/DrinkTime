@@ -28,14 +28,28 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/my/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      list: [{
+        pagePath: 'pages/index/index',
+        text: '主页'
+      }, {
+        pagePath: 'pages/my/index',
+        text: '我的'
+      }],
+      'color': '#000',
+      'selectedColor': '#56abe4',
+      'backgroundColor': '#fff',
+      'borderStyle': 'white'
+    },
   }
 
   // 在 App 类中的 render() 函数没有实际作用

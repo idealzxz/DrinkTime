@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'DrinkTime',
   date: '2020-10-3',
   designWidth: 750,
   deviceRatio: {
@@ -73,7 +73,8 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 

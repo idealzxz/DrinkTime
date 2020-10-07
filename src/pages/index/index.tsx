@@ -1,5 +1,6 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+
+import Taro, { Component } from '@tarojs/taro'
+import { View, Text, Button } from '@tarojs/components'
 import './index.less'
 
 export default class Index extends Component {
@@ -21,14 +22,19 @@ export default class Index extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
+  config: Taro.Config = {
     navigationBarTitleText: '首页'
+  }
+
+  navToMy() {
+    Taro.navigateTo({ url: '/pages/my/index' })
   }
 
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text>Hello 1111!</Text>
+        <Button className='btn-max-w' onClick={this.navToMy.bind(this)} >跳转</Button>
       </View>
     )
   }
